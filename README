@@ -1,0 +1,10 @@
+# go-cryptonews
+
+コマンドラインで暗号通貨の最新ニュースを取得するツールです。
+
+1.git cloneする
+2.GOPATHを通す
+    ex .bashrcにexport GOPATH=ディレクトリディレクトリディレクトリを書く
+3.go installする
+4.GOPATHにmainバイナリができるので、名前をcoinにする
+4.ターミナルでcoinと打ち込むとニュースが出る
