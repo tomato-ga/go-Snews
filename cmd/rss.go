@@ -17,6 +17,7 @@ func RSS() {
 		fmt.Fprintln(os.Stderr, err)
 		return
 	}
+	fmt.Println("■  " + feed.Title + "\n")
 	for _, item := range feed.Items {
 		if item != nil {
 			counts++
@@ -36,6 +37,7 @@ func RSS() {
 		fmt.Fprintln(os.Stderr, err)
 		return
 	}
+	fmt.Println("■  " + feed4.Title + "\n")
 	for _, item := range feed4.Items {
 		if item != nil {
 			counts++
@@ -55,6 +57,7 @@ func RSS() {
 		fmt.Fprintln(os.Stderr, err)
 		return
 	}
+	fmt.Println("■  " + feed5.Title + "\n")
 	for _, item := range feed5.Items {
 		if item != nil {
 			counts++
@@ -74,6 +77,7 @@ func RSS() {
 		fmt.Fprintln(os.Stderr, err)
 		return
 	}
+	fmt.Println("■  " + feed2.Title + "\n")
 	for _, item := range feed2.Items {
 		if item != nil {
 			counts++
@@ -93,6 +97,7 @@ func RSS() {
 		fmt.Fprintln(os.Stderr, err)
 		return
 	}
+	fmt.Println("■  " + feed3.Title + "\n")
 	for _, item := range feed3.Items {
 		if item != nil {
 			counts++
@@ -107,12 +112,33 @@ func RSS() {
 
 	}
 
-	feed6, err := gofeed.NewParser().ParseURL("https://qiita.com/popular-items/feed")
+	feed6, err := gofeed.NewParser().ParseURL("https://qiita.com/tags/go/feed")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		return
 	}
+	fmt.Println("■  " + feed6.Title + "\n")
 	for _, item := range feed6.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed7, err := gofeed.NewParser().ParseURL("https://qiita.com/tags/python/feed")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■  " + feed7.Title + "\n")
+	for _, item := range feed7.Items {
 		if item != nil {
 			counts++
 		}
