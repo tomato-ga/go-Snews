@@ -107,4 +107,23 @@ func RSS() {
 
 	}
 
+	feed6, err := gofeed.NewParser().ParseURL("https://qiita.com/popular-items/feed")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	for _, item := range feed6.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
 }
