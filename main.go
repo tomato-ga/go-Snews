@@ -1,6 +1,5 @@
 /*
 Copyright © 2022 1oku_fire <tomato-gadget.com>
-
 */
 package main
 

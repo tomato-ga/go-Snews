@@ -152,4 +152,184 @@ func RSS() {
 
 	}
 
+	feed10, err := gofeed.NewParser().ParseURL("https://assets.wor.jp/rss/rdf/nikkei/news.rdf")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■  " + feed10.Title + "\n")
+	for _, item := range feed10.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed8, err := gofeed.NewParser().ParseURL("https://assets.wor.jp/rss/rdf/reuters/top.rdf")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■  " + feed8.Title + "\n")
+	for _, item := range feed8.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed9, err := gofeed.NewParser().ParseURL("https://assets.wor.jp/rss/rdf/bloomberg/top.rdf")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■  " + feed9.Title + "\n")
+	for _, item := range feed9.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed11, err := gofeed.NewParser().ParseURL("https://news.yahoo.co.jp/rss/categories/business.xml")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■  " + feed11.Title + "\n")
+	for _, item := range feed11.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed_datascience1, err := gofeed.NewParser().ParseURL("https://datawokagaku.com/feed/")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■ データサイエンス  " + feed_datascience1.Title + "\n")
+	for _, item := range feed_datascience1.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed_datascience2, err := gofeed.NewParser().ParseURL("https://toukei-lab.com/feed")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■ データサイエンス  " + feed_datascience2.Title + "\n")
+	for _, item := range feed_datascience2.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed_datascience3, err := gofeed.NewParser().ParseURL("https://brainsnacks.org/feed/")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■ データサイエンス  " + feed_datascience3.Title + "\n")
+	for _, item := range feed_datascience3.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed_datascience4, err := gofeed.NewParser().ParseURL("https://analysis-navi.com/?feed=rss2")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■ データサイエンス  " + feed_datascience4.Title + "\n")
+	for _, item := range feed_datascience4.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
+	feed_datascience5, err := gofeed.NewParser().ParseURL("https://qiita.com/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/feed")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		return
+	}
+	fmt.Println("■ データサイエンス  " + feed_datascience5.Title + "\n")
+	for _, item := range feed_datascience5.Items {
+		if item != nil {
+			counts++
+		}
+
+		if counts >= 4 {
+			counts = 0
+			break
+		}
+		fmt.Println(item.Title)
+		fmt.Println("->", item.Link+"\n")
+
+	}
+
 }
